@@ -20,8 +20,8 @@ public:
 
 	//setters
 	void setCalories(const int calories);
-	void setPlanName(const std::string name);
-	void setDate(const std::string date);
+	void setDPlanName(const std::string name);
+	void setDDate(const std::string date);
 
 private:
 	int mGoalCalories;
@@ -32,7 +32,27 @@ private:
 
 class ExercisePlan
 {
+public:
+	ExercisePlan();//defualt constructor
 
+	ExercisePlan(const ExercisePlan& copy);//copy constructor
+
+	~ExercisePlan(); //destructor
+
+	//getters
+	int getSteps();
+	std::string getEPlanName();
+	std::string getEDate();
+
+	//setters
+	void setSteps(const int goalSteps);
+	void setEPlanName(const std::string PlanName);
+	void setEDate(const std::string Date);
+
+private:
+	int mGoalSteps;
+	std::string mPlanName;
+	std::string mDate;
 };
 
 class FitnessAppWrapper
