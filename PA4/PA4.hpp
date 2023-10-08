@@ -3,11 +3,15 @@
 #include <iostream>
 #include <string>
 
+using std::ostream;
+using std::cout;
+using std::cin;
+using std::string;
 
 class DietPlan
 {
 public:
-	DietPlan(); //defualt constructor
+	DietPlan(int newCalories = 0, string newName = "No Name", string newdate = "01/01/0001"); //defualt constructor
 	
 	DietPlan(const DietPlan& copy);//copy constructor
 
@@ -23,6 +27,8 @@ public:
 	void setDPlanName(const std::string name);
 	void setDDate(const std::string date);
 
+	void editGoal();
+
 private:
 	int mGoalCalories;
 	std::string mPlanName;
@@ -33,7 +39,7 @@ private:
 class ExercisePlan
 {
 public:
-	ExercisePlan();//defualt constructor
+	ExercisePlan(int newSteps = 0, string newName = "No Name", string newdate = "01/01/0001");//defualt constructor
 
 	ExercisePlan(const ExercisePlan& copy);//copy constructor
 
@@ -49,6 +55,8 @@ public:
 	void setEPlanName(const std::string PlanName);
 	void setEDate(const std::string Date);
 
+	void editGoal();
+
 private:
 	int mGoalSteps;
 	std::string mPlanName;
@@ -59,3 +67,6 @@ class FitnessAppWrapper
 {
 
 };
+
+ostream& operator<<(ostream& lhs, DietPlan& rhs);
+ostream& operator<<(ostream& lhs, ExercisePlan& rhs);

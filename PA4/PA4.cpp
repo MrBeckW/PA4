@@ -6,11 +6,11 @@
 /// <summary>
 /// Defualt constructor for DietPlan class
 /// </summary>
-DietPlan::DietPlan()
+DietPlan::DietPlan(int newCalories, string newName, string newdate)
 {
-	mGoalCalories = 0;
-	mPlanName = "No Name";
-	mDate = "01/01/0001";//Month/day/year
+	mGoalCalories = newCalories;
+	mPlanName = newName;
+	mDate = newdate;//Month/day/year
 }
 
 /// <summary>
@@ -94,6 +94,17 @@ void DietPlan::setDDate(const std::string date)
 	mDate = date;
 }
 
+void DietPlan::editGoal()
+{
+	int newCal;
+	cout << "What is your new daily calorie goal?\n>";
+	cin >> newCal;
+
+	this->setCalories(newCal);
+
+	cout << "Your New Plan: " << *this << std::endl;
+}
+
 
 /////////////////////
 //ExercisePlan Member-Functions
@@ -101,11 +112,11 @@ void DietPlan::setDDate(const std::string date)
 /// <summary>
 /// Defulat constructor for ExercisePlan class.
 /// </summary>
-ExercisePlan::ExercisePlan()
+ExercisePlan::ExercisePlan(int newSteps, string newName, string newdate)
 {
-	mGoalSteps = 0;
-	mPlanName = "No Name";
-	mDate = "01/01/0001"; //Month/Day/Year
+	mGoalSteps = newSteps;
+	mPlanName = newName;
+	mDate = newdate; //Month/Day/Year
 }
 
 /// <summary>
@@ -187,4 +198,30 @@ void ExercisePlan::setEPlanName(const std::string PlanName)
 void ExercisePlan::setEDate(const std::string Date)
 {
 	mDate = Date;
+}
+
+void ExercisePlan::editGoal()
+{
+	int newSteps;
+	cout << "What is your new daily steps goal?\n>";
+	cin >> newSteps;
+
+	this->setSteps(newSteps);
+
+	cout << "Your New Plan: " << *this << std::endl;
+}
+
+////////////////////////////////
+//Non-Member Functions
+
+ostream& operator<<(ostream& lhs, DietPlan& rhs)
+{
+	lhs << "Plan Name: " << rhs.getPlanName() << " Max Calories: " << rhs.getCalories() << " Plan Date: " << rhs.getDate();
+	return lhs;
+}
+
+ostream& operator<<(ostream& lhs, ExercisePlan& rhs)
+{
+	lhs << "Plan Name: " << rhs.getEPlanName() << " Steps Goal: " << rhs.getSteps() << " Plan Date: " << rhs.getEDate();
+	return lhs;
 }
