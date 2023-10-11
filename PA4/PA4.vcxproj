@@ -127,11 +127,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DietPlan.cpp" />
+    <ClCompile Include="ExercisePlan.cpp" />
+    <ClCompile Include="FitnessAppWrapper.cpp" />
+    <ClCompile Include="NodeDP.cpp" />
+    <ClCompile Include="WeeklyDPlan.cpp" />
+    <ClCompile Include="WeeklyEPlan.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NodeEP.cpp" />
     <ClCompile Include="PA4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DietPlan.hpp" />
+    <ClInclude Include="ExercisePlan.hpp" />
+    <ClInclude Include="FitnessAppWrapper.hpp" />
+    <ClInclude Include="NodeDP.hpp" />
+    <ClInclude Include="WeeklyDPlan.hpp" />
+    <ClInclude Include="WeeklyEPlan.hpp" />
+    <ClInclude Include="NodeEP.hpp" />
     <ClInclude Include="PA4.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dietPlans.txt" />
+    <Text Include="exercisePlans.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
