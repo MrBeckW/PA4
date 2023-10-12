@@ -14,14 +14,25 @@ public:
 	~FitnessAppWrapper();//destructor
 
 	void runApp(void);
-	
-	void loadDailyPlan(ifstream imputStream, DietPlan& newPlan);
-	void loadDailyPlan(ifstream imputStream, ExercisePlan& newPlan);
-
-	void loadWeeklyPlan(ifstream imputStream, WeeklyEPlan newPlan);
-	void loadWeeklyPlan(ifstream imputStream, WeeklyDPlan newPlan);
 
 private:
+
+	void loadDailyPlan(ifstream& imputStream, DietPlan& newPlan); 
+	void loadDailyPlan(ifstream& imputStream, ExercisePlan& newPlan); 
+
+	void loadWeeklyPlan(ifstream& imputStream, WeeklyEPlan& newPlan);
+	void loadWeeklyPlan(ifstream& imputStream, WeeklyDPlan& newPlan);
+
+	void displayDailyPlan(ExercisePlan EPlan) const;
+	void displayDailyPlan(DietPlan DPlan) const;
+
+	void displayWeeklyPlan(WeeklyEPlan& EPlan) const;
+	void displayWeeklyPlan(WeeklyDPlan& DPlan) const;
+
+
+	void displayMenu();
+
+
 	WeeklyEPlan mWeeklyExercisePlan;
 	WeeklyDPlan mWeeklyDietPlan;
 

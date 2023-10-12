@@ -119,6 +119,7 @@ ostream& operator<<(ostream& lhs, DietPlan& rhs)
 
 istream& operator>>(istream& stream, DietPlan& rhs)
 {
+
 	string name, date, calS, empty;
 
 	std::getline(stream, name);

@@ -1,9 +1,2 @@
-﻿  DietPlan.cpp
-  ExercisePlan.cpp
-  FitnessAppWrapper.cpp
-  WeeklyPlan.cpp
-  main.cpp
-  Node.cpp
-  PA4.cpp
-  Generating Code...
+﻿  FitnessAppWrapper.cpp
   PA4.vcxproj -> C:\Users\beckr\Documents\School Work\CS 122\ProgrammingAssaignments\PA4\PA4\x64\Debug\PA4.exe

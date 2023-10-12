@@ -30,11 +30,6 @@ ExercisePlan NodeEP::getExercisePlan()
 	return mExercisePlan;
 }
 
-//DietPlan Node::getDietPlan()
-//{
-//	return mDietPlan;
-//}
-
 void NodeEP::setpNext(NodeEP* const nextNode)
 {
 	mpNext = nextNode;
@@ -44,10 +39,5 @@ void NodeEP::setExercisePlan(const ExercisePlan newEPlan)
 {
 	mExercisePlan = newEPlan;
 }
-
-//void Node::setDietPlan(const DietPlan newDPlan)
-//{
-//	mDietPlan = newDPlan;
-//}
 
 
