@@ -10,8 +10,8 @@ FitnessAppWrapper::FitnessAppWrapper()
 	mImputEPlan.open("exercisePlans.txt");
 	mImputDPlan.open("dietPlans.txt");
 	
-	mOutputEPlan.open("exercisePlans.txt");
-	mOutputDPlan.open("dietPlans.txt");
+	/*mOutputEPlan.open("exercisePlans.txt");
+	mOutputDPlan.open("dietPlans.txt");*/
 }
 
 /// <summary>
@@ -83,18 +83,19 @@ void FitnessAppWrapper::runApp(void)
 // private member functions
 
 
-void FitnessAppWrapper::loadDailyPlan(ifstream& imputStream, DietPlan& newPlan)
+void FitnessAppWrapper::loadDailyPlan(fstream& imputStream, DietPlan& newPlan)
 {
 	imputStream >> newPlan;
 }
 
-void FitnessAppWrapper::loadDailyPlan(ifstream& imputStream, ExercisePlan& newPlan)
+void FitnessAppWrapper::loadDailyPlan(fstream& imputStream, ExercisePlan& newPlan)
 {
 	imputStream >> newPlan;
 }
 
-void FitnessAppWrapper::loadWeeklyPlan(ifstream& inputStream, WeeklyEPlan& newPlan)
+void FitnessAppWrapper::loadWeeklyPlan(fstream& inputStream, WeeklyEPlan& newPlan)
 {
+
 	while (!inputStream.eof())
 	{
 		ExercisePlan temp;
@@ -103,7 +104,7 @@ void FitnessAppWrapper::loadWeeklyPlan(ifstream& inputStream, WeeklyEPlan& newPl
 	}
 }
 
-void FitnessAppWrapper::loadWeeklyPlan(ifstream& inputStream, WeeklyDPlan& newPlan)
+void FitnessAppWrapper::loadWeeklyPlan(fstream& inputStream, WeeklyDPlan& newPlan)
 {
 	while (!inputStream.eof())
 	{
@@ -113,17 +114,17 @@ void FitnessAppWrapper::loadWeeklyPlan(ifstream& inputStream, WeeklyDPlan& newPl
 	}
 }
 
-void FitnessAppWrapper::storeDailyPlan(ofstream& outputStream, DietPlan& DPlan)
+void FitnessAppWrapper::storeDailyPlan(fstream& outputStream, DietPlan& DPlan)
 {
 	outputStream << DPlan;
 }
 
-void FitnessAppWrapper::storeDailyPlan(ofstream& outputStream, ExercisePlan& EPlan)
+void FitnessAppWrapper::storeDailyPlan(fstream& outputStream, ExercisePlan& EPlan)
 {
 	outputStream << EPlan;
 }
 
-void FitnessAppWrapper::storeWeeklyPlan(ofstream& outputStream, WeeklyDPlan& DPlans)
+void FitnessAppWrapper::storeWeeklyPlan(fstream& outputStream, WeeklyDPlan& DPlans)
 {
 	NodeDP* pCur = DPlans.getpHead();
 
@@ -134,7 +135,7 @@ void FitnessAppWrapper::storeWeeklyPlan(ofstream& outputStream, WeeklyDPlan& DPl
 	}
 }
 
-void FitnessAppWrapper::storeWeeklyPlan(ofstream& outputStream, WeeklyEPlan& EPlans)
+void FitnessAppWrapper::storeWeeklyPlan(fstream& outputStream, WeeklyEPlan& EPlans)
 {
 	NodeEP* pCur = EPlans.getpHead();
 

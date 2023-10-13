@@ -3,13 +3,13 @@
 #include "WeeklyEPlan.hpp"
 #include "WeeklyDPlan.hpp"
 
-using std::ifstream;
-using std::ofstream;
+using std::fstream;
+
 
 class FitnessAppWrapper
 {
 public:
-	FitnessAppWrapper();//defulat constructor
+	FitnessAppWrapper();//defualt constructor
 	
 	~FitnessAppWrapper();//destructor
 
@@ -17,17 +17,17 @@ public:
 
 private:
 
-	void loadDailyPlan(ifstream &inputStream, DietPlan& newPlan); 
-	void loadDailyPlan(ifstream &inputStream, ExercisePlan& newPlan); 
+	void loadDailyPlan(fstream &inputStream, DietPlan& newPlan); 
+	void loadDailyPlan(fstream &inputStream, ExercisePlan& newPlan); 
 
-	void loadWeeklyPlan(ifstream &inputStream, WeeklyEPlan& newPlan);
-	void loadWeeklyPlan(ifstream &inputStream, WeeklyDPlan& newPlan);
+	void loadWeeklyPlan(fstream &inputStream, WeeklyEPlan& newPlan);
+	void loadWeeklyPlan(fstream &inputStream, WeeklyDPlan& newPlan);
 
-	void storeDailyPlan(ofstream& outputStream, DietPlan& DPlan);
-	void storeDailyPlan(ofstream& outputStream, ExercisePlan& EPlan);
+	void storeDailyPlan(fstream& outputStream, DietPlan& DPlan);
+	void storeDailyPlan(fstream& outputStream, ExercisePlan& EPlan);
 
-	void storeWeeklyPlan(ofstream& outputStream, WeeklyDPlan& DPlans);
-	void storeWeeklyPlan(ofstream& outputStream, WeeklyEPlan& EPlans);
+	void storeWeeklyPlan(fstream& outputStream, WeeklyDPlan& DPlans);
+	void storeWeeklyPlan(fstream& outputStream, WeeklyEPlan& EPlans);
 
 	void displayDailyPlan(ExercisePlan EPlan) const;
 	void displayDailyPlan(DietPlan DPlan) const;
@@ -44,11 +44,11 @@ private:
 	WeeklyEPlan mWeeklyExercisePlan;
 	WeeklyDPlan mWeeklyDietPlan;
 
-	ifstream mImputEPlan;
-	ifstream mImputDPlan;
+	fstream mImputEPlan;
+	fstream mImputDPlan;
 
-	ofstream mOutputEPlan;
-	ofstream mOutputDPlan;
+	fstream mOutputEPlan;
+	fstream mOutputDPlan;
 };
 
 
