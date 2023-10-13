@@ -1,12 +1,17 @@
 #include "PA4.hpp"
 #include "WeeklyEPlan.hpp"
 
-
+/// <summary>
+/// defualt constructor
+/// </summary>
 WeeklyEPlan::WeeklyEPlan()
 {
 	mpHead = nullptr;
 }
 
+/// <summary>
+/// destructor
+/// </summary>
 WeeklyEPlan::~WeeklyEPlan()
 {
 	NodeEP* pCur = mpHead;
@@ -20,11 +25,20 @@ WeeklyEPlan::~WeeklyEPlan()
 	}
 }
 
+/// <summary>
+/// getter for mpHead
+/// </summary>
+/// <returns>pointer to a NodeEP</returns>
 NodeEP* WeeklyEPlan::getpHead()
 {
 	return mpHead;
 }
 
+/// <summary>
+/// insert function for inserting at the end of a linked list
+/// </summary>
+/// <param name="newEplan">an Exercise Plan Class</param>
+/// <returns>true/false if memory is able to be allocated</returns>
 bool WeeklyEPlan::insertAtEnd(const ExercisePlan newEplan)
 {
 	bool success = false;
@@ -50,6 +64,10 @@ bool WeeklyEPlan::insertAtEnd(const ExercisePlan newEplan)
 	return success;
 }
 
+/// <summary>
+/// checks if list is empty
+/// </summary>
+/// <returns>returns true if list is empty</returns>
 bool WeeklyEPlan::isEmpty()
 {
 	if (mpHead == nullptr)
@@ -59,7 +77,11 @@ bool WeeklyEPlan::isEmpty()
 	return false;
 }
 
-
+/// <summary>
+/// create node fuction for a linked list
+/// </summary>
+/// <param name="newEPlan">Exercise Plan class</param>
+/// <returns>pointer to node</returns>
 NodeEP* WeeklyEPlan::createNode(ExercisePlan newEPlan)
 {
 	NodeEP* pMem = new NodeEP(newEPlan);

@@ -11,9 +11,9 @@ int main()
 	input.open("dietPlans.txt");
 	
 	
-	DietPlan d1;
-	input >> d1;
-	cout << d1;*/
+	DietPlan d1, d2;
+	input >> d1 >> d2;
+	cout << d1 << d2;*/
 
 	FitnessAppWrapper App;
 

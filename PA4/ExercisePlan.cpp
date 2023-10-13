@@ -111,12 +111,25 @@ void ExercisePlan::editGoal()
 ////////////////////////////////
 //Non-Member Functions
 
+/// <summary>
+/// insert stream operator ExercisePlan class
+/// </summary>
+/// <param name="lhs">stream to be inserted into</param>
+/// <param name="rhs">Exercise plan to be inserted</param>
+/// <returns>the original stream</returns>
 ostream& operator<<(ostream& lhs, ExercisePlan& rhs)
 {
-	lhs << "Plan Name: " << rhs.getEPlanName() << " Steps Goal: " << rhs.getSteps() << " Plan Date: " << rhs.getEDate();
+	lhs << rhs.getEPlanName() << "\n" << rhs.getSteps() << "\n" << rhs.getEDate() << "\n\n";
 	return lhs;
 }
 
+
+/// <summary>
+/// stream extraction operator for ExercisePlan class
+/// </summary>
+/// <param name="stream">stream to extract from</param>
+/// <param name="rhs">exercise plan to be extracted to</param>
+/// <returns>the original stream</returns>
 istream& operator>>(istream& stream, ExercisePlan& rhs)
 {
 	string name, date, stepsS, empty;

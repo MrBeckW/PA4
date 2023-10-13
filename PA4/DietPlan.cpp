@@ -111,12 +111,24 @@ void DietPlan::editGoal()
 //////////////////////
 //Non-Member Functions
 
+/// <summary>
+/// insert stream operator DietPlan class
+/// </summary>
+/// <param name="lhs">stream to be inserted into</param>
+/// <param name="rhs">DietPlan to be inserted</param>
+/// <returns>the original stream</returns>
 ostream& operator<<(ostream& lhs, DietPlan& rhs)
 {
-	lhs << "Plan Name: " << rhs.getPlanName() << " Max Calories: " << rhs.getCalories() << " Plan Date: " << rhs.getDate();
+	lhs << rhs.getPlanName() << "\n" << rhs.getCalories() << "\n" << rhs.getDate() << "\n\n";
 	return lhs;
 }
 
+/// <summary>
+/// stream extraction operator for DietPlan class
+/// </summary>
+/// <param name="stream">stream to extract from</param>
+/// <param name="rhs">DietPlan to be extracted to</param>
+/// <returns>the original stream</returns>
 istream& operator>>(istream& stream, DietPlan& rhs)
 {
 

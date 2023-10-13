@@ -8,6 +8,7 @@ using std::string;
 using std::ostream;
 using std::istream;
 
+
 class DietPlan
 {
 public:

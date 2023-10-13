@@ -17,11 +17,17 @@ public:
 
 private:
 
-	void loadDailyPlan(ifstream& imputStream, DietPlan& newPlan); 
-	void loadDailyPlan(ifstream& imputStream, ExercisePlan& newPlan); 
+	void loadDailyPlan(ifstream &inputStream, DietPlan& newPlan); 
+	void loadDailyPlan(ifstream &inputStream, ExercisePlan& newPlan); 
 
-	void loadWeeklyPlan(ifstream& imputStream, WeeklyEPlan& newPlan);
-	void loadWeeklyPlan(ifstream& imputStream, WeeklyDPlan& newPlan);
+	void loadWeeklyPlan(ifstream &inputStream, WeeklyEPlan& newPlan);
+	void loadWeeklyPlan(ifstream &inputStream, WeeklyDPlan& newPlan);
+
+	void storeDailyPlan(ofstream& outputStream, DietPlan& DPlan);
+	void storeDailyPlan(ofstream& outputStream, ExercisePlan& EPlan);
+
+	void storeWeeklyPlan(ofstream& outputStream, WeeklyDPlan& DPlans);
+	void storeWeeklyPlan(ofstream& outputStream, WeeklyEPlan& EPlans);
 
 	void displayDailyPlan(ExercisePlan EPlan) const;
 	void displayDailyPlan(DietPlan DPlan) const;
@@ -29,6 +35,8 @@ private:
 	void displayWeeklyPlan(WeeklyEPlan& EPlan) const;
 	void displayWeeklyPlan(WeeklyDPlan& DPlan) const;
 
+	void editDailyPlan(WeeklyDPlan& DPlans);
+	void editDailyPlan(WeeklyEPlan& EPlans);
 
 	void displayMenu();
 
@@ -42,3 +50,5 @@ private:
 	ofstream mOutputEPlan;
 	ofstream mOutputDPlan;
 };
+
+
