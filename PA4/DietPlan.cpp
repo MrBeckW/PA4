@@ -97,6 +97,9 @@ void DietPlan::setDDate(const std::string date)
 	mDate = date;
 }
 
+/// <summary>
+/// allows the user to edit the goal calories
+/// </summary>
 void DietPlan::editGoal()
 {
 	int newCal;
@@ -119,7 +122,7 @@ void DietPlan::editGoal()
 /// <returns>the original stream</returns>
 ostream& operator<<(ostream& lhs, DietPlan& rhs)
 {
-	lhs << rhs.getPlanName() << "\n" << rhs.getCalories() << "\n" << rhs.getDate() << "\n\n";
+	lhs << rhs.getPlanName() << "\n" << rhs.getCalories() << "\n" << rhs.getDate();
 	return lhs;
 }
 

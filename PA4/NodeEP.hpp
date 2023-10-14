@@ -11,7 +11,7 @@ public:
 
 	//getters
 	NodeEP* getpNext();
-	ExercisePlan getExercisePlan();
+	ExercisePlan& getExercisePlan();
 	
 
 	//setters

@@ -1,27 +1,27 @@
-Bannana
-3500
+Monday
+3350
 10/09/2023
 
-Orange
-7500
+Tuesday
+1700
 10/10/2023
 
-Pineapple
-2236
+Wednesday
+1800
 10/11/2023
 
-Teriyaki
-200
+Thursday
+1800
 10/12/2023
 
-Uranium
-2350000
+Friday
+2200
 10/13/2023
 
-Fried Chicken
-1200
+Saturday
+2500
 10/14/2023
 
-Rice
-2000
-10/15/2023
+Sunday
+3350
+10/14/2023

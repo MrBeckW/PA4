@@ -7,15 +7,6 @@
 
 int main()
 {
-	/*std::ifstream input;
-	input.open("dietPlans.txt");
-	
-	
-	DietPlan d1;
-	input >> d1;
-	
-	input.close();*/
-
 	FitnessAppWrapper App;
 
 	App.runApp();

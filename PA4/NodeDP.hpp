@@ -12,7 +12,7 @@ public:
 
 	//getters
 	NodeDP* getpNext();
-	DietPlan getDietPlan();
+	DietPlan& getDietPlan();
 
 	//setters
 	void setpNext(NodeDP* const nextNode);

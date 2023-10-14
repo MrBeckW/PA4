@@ -4,12 +4,11 @@
 #include "WeeklyDPlan.hpp"
 
 using std::fstream;
-
+using std::ofstream;
 
 class FitnessAppWrapper
 {
 public:
-	FitnessAppWrapper();//defualt constructor
 	
 	~FitnessAppWrapper();//destructor
 
@@ -39,16 +38,13 @@ private:
 	void editDailyPlan(WeeklyEPlan& EPlans);
 
 	void displayMenu();
-
+	void endApp();
 
 	WeeklyEPlan mWeeklyExercisePlan;
 	WeeklyDPlan mWeeklyDietPlan;
 
-	fstream mImputEPlan;
-	fstream mImputDPlan;
-
-	fstream mOutputEPlan;
-	fstream mOutputDPlan;
+	fstream mInputEPlan;
+	fstream mIputDPlan;
 };
 
 

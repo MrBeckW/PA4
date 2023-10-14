@@ -96,6 +96,9 @@ void ExercisePlan::setEDate(const std::string Date)
 	mDate = Date;
 }
 
+/// <summary>
+/// function to allow user to edit the goal steps
+/// </summary>
 void ExercisePlan::editGoal()
 {
 	int newSteps;
@@ -119,10 +122,9 @@ void ExercisePlan::editGoal()
 /// <returns>the original stream</returns>
 ostream& operator<<(ostream& lhs, ExercisePlan& rhs)
 {
-	lhs << rhs.getEPlanName() << "\n" << rhs.getSteps() << "\n" << rhs.getEDate() << "\n\n";
+	lhs << rhs.getEPlanName() << "\n" << rhs.getSteps() << "\n" << rhs.getEDate();
 	return lhs;
 }
-
 
 /// <summary>
 /// stream extraction operator for ExercisePlan class

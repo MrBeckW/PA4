@@ -42,7 +42,7 @@ NodeDP* NodeDP::getpNext()
 /// getter for mDietPlan
 /// </summary>
 /// <returns></returns>
-DietPlan NodeDP::getDietPlan()
+DietPlan& NodeDP::getDietPlan()
 {
 	return mDietPlan;
 }

@@ -1,27 +1,27 @@
-Light
-299792458
+Monday
+10000
 10/09/2023
 
-Peregrine Falcon
-246
+Tuesday
+15000
 10/10/2023
 
-S4714
-15000
+Wednesday
+13000
 10/11/2023
 
-Thrust SSC
-763
+Thursday
+10000
 10/12/2023
 
-SR-71
-2302
+Friday
+15000
 10/13/2023
 
-Parker Solar Probe
-535000
+Saturday
+5000
 10/14/2023
 
-Cheetah
-80
-10/15/2023
+Sunday
+5000
+10/14/2023
